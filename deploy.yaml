@@ -1,0 +1,11 @@
+# DEPLOY PLAYBOOK
+---
+- name: DEPLOY PLAYBOOK
+  hosts: test-server
+  tasks:
+
+  - name: deploy docker-compose
+    docker_compose:
+      scale:
+          fpm: 5
+      project_src: /home/magicwebs/webinar-test/
